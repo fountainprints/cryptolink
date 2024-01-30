@@ -18,7 +18,7 @@ font-family: 'DM Sans', sans-serif;
 
 .container{
     background-color: black;
-    Width: 108em;
+    Width: 100vw; /* Setting the width to cover the entire screen*/
     height: 433.8125em;
     overflow-x:hidden;
     overflow-y: hidden;
@@ -27,32 +27,30 @@ font-family: 'DM Sans', sans-serif;
     
 }
 
-.timi{
-  display: inline-flex;
-align-items: center;
-gap: 1017px;
-height:74px;
-width:1463px;
-margin-left: 133px;
-margin-right: 132px;
-margin-top:73px;
+.timi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0; /* Remove the gap to make it span the entire width */
+  height: 74px;
+  margin-left: 132px;
+  margin-right: 132px;
+  margin-top: 73px;
+  width: calc(100% - 264px); /* 100% width minus 132px margin on both sides */
 }
 
 .timi p {
-color: white;
- font-size: 26.15px;
- font-family: DM Sans;
- font-weight: 500;
- word-wrap: break-word
+  color: white;
+  font-size: 26.15px;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  word-wrap: break-word;
 }
+
 
 
 .a {
   display: flex;
-  padding: 24px 32px;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;display: flex;
   padding: 24px 32px;
   justify-content: center;
   align-items: center;
@@ -122,18 +120,36 @@ height: 336px;
 
 .image {
   position: absolute;
-  top:600px;
-  right:-500px;
-  
+  top: 600px;
+  right: -80px; /* Adjust this value as needed to position the image */
 }
 
-.image img
-{ 
+.image img {
   opacity: 0.77;
-filter: blur(6.999999523162842px);
-width: 622px;
-height: 622px; 
+  filter: blur(6.999999523162842px);
+  max-width: 100%; /* Make the image responsive by limiting its width to 100% of its container */
+  height: auto; /* Maintain the aspect ratio */
 }
+
+/* Breakpoint for smaller screens (mobile phones) */
+@media only screen and (max-width: 430px) {
+  .image {
+    top: 300px; /* Adjust the image position for smaller screens */
+    right: -200px; /* Adjust the image position for smaller screens */
+  }
+
+  .image img {
+    max-width: 100%; /* Allow the image to take the full width on smaller screens */
+  }
+}
+
+/* Breakpoint for larger screens (PC) */
+@media only screen and (min-width: 431px) {
+  .image img {
+    max-width: 80%; /* Decrease the maximum width for screens wider than 430px */
+  }
+}
+
 
 .overflow {
   overflow:hidden;
@@ -162,7 +178,7 @@ text-shadow: -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 2px 2p
 
 .flexmode {
   display: flex;
-  gap: 74px;
+  gap: 504px;
   margin-top: 0px;
 }
 
