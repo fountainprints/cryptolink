@@ -49,16 +49,23 @@ font-family: 'DM Sans', sans-serif;
 
 
 .a {
+  color: #06070A;
+font-family: "DM Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-decoration: none;
   display: flex;
   padding: 24px 32px;
   justify-content: center;
   align-items: center;
   gap: 24px;
   background: linear-gradient(95deg, #FFF 0%, rgba(255, 255, 255, 0.51) 101.07%);
+  tex
 
 }
-a.a { text-decoration:none;
-}
+
 .b {
   color: rgba(255, 255, 255, 0.60);
 font-family: "DM Sans";
