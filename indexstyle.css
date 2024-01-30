@@ -57,7 +57,8 @@ font-family: 'DM Sans', sans-serif;
   background: linear-gradient(95deg, #FFF 0%, rgba(255, 255, 255, 0.51) 101.07%);
 
 }
-
+a.a { text-decoration:none;
+}
 .b {
   color: rgba(255, 255, 255, 0.60);
 font-family: "DM Sans";
