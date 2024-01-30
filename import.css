@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&family=Roboto:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: black;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+}
+
+.import-cont {
+  width: fit-content;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  top: 100px;
+  margin: 0 10px;
+}
+
+.head-tabs {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+.head-tabs div {
+  padding: 10px 0;
+  flex: 1;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+  outline: none;
+  padding: 10px 12px;
+  font-family: "Open Sans", sans-serif;
+}
+
+button {
+  border: none;
+  padding: 15px 30px;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #92E4FD;
+  color: white;
+}
+
+#phrase {
+  background-color: #92e4fd;
+}
+
+input {
+  outline: none;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 12px;
+  margin-top: 10px;
+  display: block;
+}
+
+.keystore,
+.privatekey {
+  display: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+@media screen and (max-width: 560px) {
+  textarea,
+  input {
+    width: 100%;
+  }
+
+  .head-tabs div {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .head-tabs div {
+    font-size: 14px;
+  }
+}

@@ -48,19 +48,16 @@ color: white;
 
 
 .a {
-  color: #06070A;
-font-family: "DM Sans";
-font-size: 20px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-display: flex;
-padding: 24px 32px;
-justify-content: center;
-align-items: center;
-gap: 24px;
-width:290px;
-background: linear-gradient(95deg, #FFF 0%, rgba(255, 255, 255, 0.51) 101.07%);
+  display: flex;
+  padding: 24px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;display: flex;
+  padding: 24px 32px;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  background: linear-gradient(95deg, #FFF 0%, rgba(255, 255, 255, 0.51) 101.07%);
 
 }
 
