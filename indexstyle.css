@@ -2,50 +2,67 @@
   @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&display=swap');
 
   @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700&family=DM+Sans:opsz,wght@9..40,500&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 
-.body{
+*{
+  text-decoration: none;
+  list-style: none;
+}
+
+body{
     overflow-x: hidden;
-    overflow-y:hidden;
-    
+    margin-left: 20px;
+    margin-right: 20px;
     font-family: 'Bricolage Grotesque', sans-serif;
-font-family: 'DM Sans', sans-serif;
+    font-family: 'DM Sans', sans-serif;
+    background: #000;
+}
 
+@media(max-width: 1469px){
+    body{
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .a{
+        padding: 12px 16px;
+        gap: 2px;
+        width: 240px;
+    }
+    
 }
 
 
 .container{
     background-color: black;
-    Width: 100vw; /* Setting the width to cover the entire screen*/
-    height: 433.8125em;
+    Width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     overflow-x:hidden;
-    overflow-y: hidden;
-    min-height:0%;
-
-    
+    overflow-y: hidden;    
 }
 
-.timi {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0; /* Remove the gap to make it span the entire width */
-  height: 74px;
-  margin-left: 132px;
-  margin-right: 132px;
-  margin-top: 73px;
-  width: calc(100% - 264px); /* 100% width minus 132px margin on both sides */
+.timi{
+display: inline-flex;
+flex-wrap: wrap;
+align-items: center;
+gap: 1rem;
+justify-content: space-between;
+height:74px;
+width:100%;
+margin-left: auto;
+margin-right: auto;
+margin-top:73px;
 }
 
 .timi p {
-  color: white;
-  font-size: 26.15px;
-  font-family: 'DM Sans', sans-serif;
-  font-weight: 500;
-  word-wrap: break-word;
+color: white;
+margin-left: 50px;
+font-size: 26.15px;
+font-family: DM Sans;
+font-weight: 500;
+word-wrap: break-word;
+cursor: pointer;
 }
-
 
 
 .a {
@@ -55,15 +72,14 @@ font-size: 20px;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-text-decoration: none;
-  display: flex;
-  padding: 24px 32px;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  background: linear-gradient(95deg, #FFF 0%, rgba(255, 255, 255, 0.51) 101.07%);
-  tex
-
+display: flex;
+padding: 24px 32px;
+justify-content: center;
+align-items: center;
+gap: 2px;
+width:290px;
+background: linear-gradient(95deg, #FFF 0%, rgba(255, 255, 255, 0.51) 101.07%);
+cursor: pointer;
 }
 
 .b {
@@ -78,27 +94,31 @@ text-align: center;
 margin-top: 184px;
 }
 
-.embark {
-  text-align: center;
-font-family: "Bricolage Grotesque";
-font-size: 108px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: -2.16px;
-background: linear-gradient(95deg, #FFF 1.7%, rgba(255, 255, 255, 0.44) 100.26%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
-margin-top: 37px;
-position: relative;
-z-index:100000;
 
+
+.embark p.c-1{
+  text-align: center;
+  line-height: normal;
+  letter-spacing: -2.16px;
+  font-size: clamp(70px, 10vw, 118px);
+  font-family: "Bricolage Grotesque";
+    font-style: normal;
+    font-weight: 700;
+    background: linear-gradient(95deg, #FFF 1.7%, rgba(255, 255, 255, 0.44) 100.26%);
+    background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    margin-top: 37px;
+    z-index: 100000;
 }
 
+
 .c {
+  text-align: center;
+    line-height: normal;
+    letter-spacing: -2.16px;
   color: white;
-font-size: 33px;
+font-size: clamp(20px, 10vw, 33px);
 font-family: DM Sans;
 font-weight: 400;
 letter-spacing: 0.33px;
@@ -127,48 +147,31 @@ height: 336px;
 
 .image {
   position: absolute;
-  top: 600px;
-  right: -80px; /* Adjust this value as needed to position the image */
+  top:600px;
+  right:-500px;
+  
 }
 
-.image img {
+.image img
+{ 
   opacity: 0.77;
-  filter: blur(6.999999523162842px);
-  max-width: 100%; /* Make the image responsive by limiting its width to 100% of its container */
-  height: auto; /* Maintain the aspect ratio */
+filter: blur(6.999999523162842px);
+width: 622px;
+height: 622px; 
 }
-
-/* Breakpoint for smaller screens (mobile phones) */
-@media only screen and (max-width: 430px) {
-  .image {
-    top: 300px; /* Adjust the image position for smaller screens */
-    right: -200px; /* Adjust the image position for smaller screens */
-  }
-
-  .image img {
-    max-width: 100%; /* Allow the image to take the full width on smaller screens */
-  }
-}
-
-/* Breakpoint for larger screens (PC) */
-@media only screen and (min-width: 431px) {
-  .image img {
-    max-width: 80%; /* Decrease the maximum width for screens wider than 430px */
-  }
-}
-
 
 .overflow {
   overflow:hidden;
 }
 
 .paymentgateway {
-  margin-top: 300px;
+  margin-top: 50px;
+  text-align: center;
   -webkit-text-stroke-width: 1.470339059829712px;
   background: #050810;
 -webkit-text-stroke-color: black;
 font-family: Montserrat;
-font-size: 307.474px;
+font-size: clamp(100px, 15vw, 175.474px);
 font-style: normal;
 font-weight: 700;
 line-height: 113%; 
@@ -176,7 +179,7 @@ letter-spacing: -19.986px;
 text-transform: uppercase;
 opacity: 0.1;
 color:#FFF;
-Width:3020px;
+Width:100%;
 overflow-x: hidden;
 text-shadow: -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 2px 2px 2px black;
 
@@ -185,28 +188,27 @@ text-shadow: -2px -2px 2px black, 2px -2px 2px black, -2px 2px 2px black, 2px 2p
 
 .flexmode {
   display: flex;
-  gap: 504px;
+  flex-wrap: wrap;
+  width: 100%;
   margin-top: 0px;
 }
 
+
 .helix {
-  width: 618px;
-height: 618px;
-flex-shrink: 0;
-
+  width: clamp(318px, 50%, 618px);
+  height: clamp(318px, 50%, 618px);
+  left: 0;
 }
+
 .helix img {
-  width: 618px;
-height: 618px;
-flex-shrink: 0;
-
-
-
+  width: 100%;
+height: 100%;
 }
+
 .community {
   color: rgba(255, 255, 255, 0.60);
 font-family: "DM Sans";
-font-size: 24px;
+font-size: clamp(18px, 50%, 24px);
 font-style: normal;
 font-weight: 500;
 line-height: normal;
@@ -214,10 +216,9 @@ letter-spacing: 2.4px;
 }
 
 .discover {
-  margin-top: 49px;
-  margin-bottom: 49px;
+
   font-family: "Bricolage Grotesque";
-font-size: 76px;
+font-size: clamp(40px, 3vw, 76px);
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -232,7 +233,7 @@ background-clip: text;
   color: #FFF;
 text-align: justify;
 font-family: "DM Sans";
-font-size: 33px;
+font-size: clamp(20px, 2vw, 33px);
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -241,21 +242,19 @@ letter-spacing: 0.33px;
 
 
 .gateway {
-  margin-top: 69px;
-  display: inline-flex;
-padding: 0 103px 0 103px;
+  margin-top: 50px;
+  text-align: center;
 align-items: center;
 background: #050810;
-Width:3020px;
-height: 347px;
-
+Width:100%;
 }
 
 .gateway p {
   -webkit-text-stroke-width: 1.470339059829712;
 -webkit-text-stroke-color: #000;
 font-family: Montserrat;
-font-size: 307.474px;
+text-align: center;
+font-size: clamp(100px, 15vw, 175.474px);
 font-style: normal;
 font-weight: 700;
 line-height: 113%; /* 347.446px */
@@ -285,7 +284,7 @@ letter-spacing: 2.4px;
 .empowering {
   text-align: center;
 font-family: "Bricolage Grotesque";
-font-size: 76px;
+font-size: clamp(56px, 10vw, 76px);
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -329,30 +328,25 @@ left: 350px;
 
 
 .flexcontainer {
-
+  
+  width: 100%;
   margin-top: 70px;
-  display:flex;
-  flex-direction: row;
-  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 0 200px;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 0px 250px 0px 250px;
+  justify-self: center;
+  padding: 20px 20px;
   
 }
 
-.crypto, .security{
-  width: 50%;
-  flex: 1;
-  gap:300px;
-  position: relative;
-  z-index: 1000000;
 
-  
-}
 
 .crypto { 
   color: #FFF;
 font-family: "DM Sans";
-font-size: 50px;
+font-size: clamp(30px, 50%, 50px);
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -363,7 +357,7 @@ letter-spacing: 0.5px;
 .crypto p {
   color: #FFF;
 font-family: "DM Sans";
-font-size: 27px;
+font-size: clamp(18px, 80%, 27px);
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -373,7 +367,7 @@ letter-spacing: 0.27px;
 .security {
   color: #FFF;
 font-family: "DM Sans";
-font-size: 50px;
+font-size: clamp(30px, 50%, 50px);
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -383,7 +377,7 @@ letter-spacing: 0.5px;
 .security P {
   color: #FFF;
 font-family: "DM Sans";
-font-size: 27px;
+font-size: clamp(18px, 80%, 27px);
 font-style: normal;
 font-weight: 400;
 line-height: normal;
@@ -394,7 +388,6 @@ letter-spacing: 0.27px;
 .security img, .crypto img {
   width: 242px;
 height: 242px;
-flex-shrink: 0;
 margin-bottom: 16px;
 display: flex;
 z-index: 10000;
@@ -431,18 +424,16 @@ height: 242px;
 
   
   .p p {
-    margin-top: 0%;
-    display: block;
     text-align: center;
-font-family: "Bricolage Grotesque";
-font-size: 76px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-background: linear-gradient(95deg, #FFF 1.7%, rgba(255, 255, 255, 0.44) 100.26%);
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    font-family: "Bricolage Grotesque";
+    font-size: clamp(40px, 40%, 76px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background: linear-gradient(95deg, #FFF 1.7%, rgba(255, 255, 255, 0.44) 100.26%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
   }
   .p {
@@ -451,46 +442,46 @@ background-clip: text;
 
 
   .container2 {
+    width: 100%;
     display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 200px;
     color:#FFF;
-    padding: 0px 120px 0px 120px;
-    flex-direction: row;
-    justify-content: space-around;
+    padding: 30px 30px;
+    justify-content: space-evenly;
     align-items: center;
-    gap:50px;
+    justify-self: center;
+    gap:20px;
   }
 
   .item1, .item2, .item3 {
-    width: 400px;
-height: 530px;
-flex-shrink: 0;
-background: #141414;
-
+    width: 350px;
+    height: 607.4px;
+    background: #141414;
   } 
 
   .item1, .item2, .item3 {
     color: rgba(255, 255, 255, 0.60);
-font-family: "DM Sans";
-font-size: 24px;
-font-style: normal;
-font-weight: 500;
-line-height: normal;
-letter-spacing: 2.4px;
-padding: 50px;
-
+    font-family: "DM Sans";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 2.4px;
+    padding: 30px;
   }
 
 
   .item1 p, .item2 p, .item3 p {
     color: #FFF;
-font-family: "DM Sans";
-font-size: 45px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 0.45px;
-margin-top: 105px;
-margin-bottom: 37px;
+    font-family: "DM Sans";
+    font-size: clamp(29px, 10vw, 45px);
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.45px;
+    margin-top: 105px;
+    margin-bottom: 37px;
   }
 
   .item2 p, .item3 p {
@@ -542,20 +533,22 @@ margin-top: 140px;
 
 /* this area is for receive transmision */
 .container3 {
+  width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 0 200px;
   justify-content: space-around;
   align-items: center;
-  padding: 0px 220px 0px 198px;
+  justify-items: center;
   margin-top: 200px;
-  gap:40px;
 }
 
 .receive {
+  margin-left: 40px;
   color: #FFF;
 text-align: left;
 font-family: "DM Sans";
-font-size: 50px;
+font-size: clamp(30px, 10vw, 50px);
 font-style: normal;
 font-weight: 700;
 line-height: normal;
@@ -564,6 +557,7 @@ letter-spacing: 0.5px;
 }
 
 .receive p {
+  
   color: #FFF;
 font-family: "DM Sans";
 font-size: 27px;
@@ -576,34 +570,35 @@ display: flex;
 }
 
 
-.email {
-  display: flex;
-width: 480px;
-height: 91px;
-padding: 28px 184px 28px 32px;
-align-items: center;
-gap: 236px;
-flex-shrink: 0;
-background: rgba(255, 255, 255, 0.08);
-color: rgba(255, 255, 255, 0.21);
-font-family: "DM Sans";
-font-size: 27px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-letter-spacing: 0.27px;
+.email input{
+  border: none;
+  height: 91px;
+  padding: 28px 184px 28px 32px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.21);
+  font-size: 27px;
+  margin-left: 40px;
+  width: 50%;
+  font-family: "DM Sans";
+  font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.27px;
 }
-
 
 
 /* this is the area for footer */
 .container4 {
+  
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  flex: 1 0 200px;
+  justify-content: space-between;
   align-items: left; 
+  margin-left: 0;
   margin-top: 234px;
   padding: 0px 150px 0 150px;
-  gap:20px;
+  gap:10;
 }
 
 .content1 {
@@ -612,19 +607,20 @@ font-family: "DM Sans";
 font-size: 35px;
 font-style: normal;
 font-weight: 500;
-line-height: normal;
 letter-spacing: 0.35px;
 }
 
-.content1 p {
-  margin-top: 50px;
-
+.content1  li {
+  list-style: none;
+  margin-top: 25px;
+  cursor: pointer;
   color: rgba(255, 255, 255, 0.45);
   font-family: "DM Sans";
-  font-size: 28px;
+  font-size: clamp(21px, 10vw, 28px);
   font-style: normal;
+  margin-left: 0;
   font-weight: 400;
-  line-height:50px;
   letter-spacing: 0.28px;
   display: flex;
+  margin-bottom: 3rem;
 }
